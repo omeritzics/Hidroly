@@ -1,0 +1,1 @@
+Fixed an issue that prevented the app from opening correctly after an update for some users.
