@@ -1,0 +1,2 @@
+* Fixed migration being stuck on the last step
+* Added German translation
