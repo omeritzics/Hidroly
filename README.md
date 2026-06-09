@@ -1,9 +1,12 @@
 <h1 align="center">Hidroly</h1>
 <p align="center">Hidroly is a health application that helps you track and manage your water intake.</p>
+
 <div align="center">
+  <a href="https://f-droid.org/packages/com.om1cael.hidroly/"><img alt="Get it on F-Droid" src="https://img.shields.io/f-droid/v/com.om1cael.hidroly?label=F-Droid"></a>
+  <a href="https://apt.izzysoft.de/fdroid/index/apk/com.om1cael.hidroly"><img alt="Get it on IzzyOnDroid" src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/com.om1cael.hidroly&label=IzzyOnDroid"></a>
+  
   <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/om1cael/Hidroly/merge_sentinel.yaml?label=Merge%20Sentinel">
   <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/om1cael">
-  <img alt="Latest Release" src="https://img.shields.io/github/v/release/om1cael/hidroly">
   <img alt="GPL-3.0 license" src="https://img.shields.io/github/license/om1cael/hidroly">
 </div>
 
