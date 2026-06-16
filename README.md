@@ -31,7 +31,7 @@ You'll need at least 8GB (16 recommended) of RAM to build and run this project.
 
 ```
 # Clone the repository
-git clone https://github.com/om1cael/hidroly.git
+git clone https://github.com/om1cael/hidroly.git && cd hidroly
 
 # Install dependencies
 flutter pub get
