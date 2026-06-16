@@ -32,7 +32,7 @@ class NumberInputFormField extends StatelessWidget {
         counterText: "",
         hintText: hintText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(8),
         ),
       ),
       controller: controller,
