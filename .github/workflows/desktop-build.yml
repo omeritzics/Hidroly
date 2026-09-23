@@ -55,7 +55,7 @@ jobs:
       - name: Install Linux build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev libfuse2
 
       - name: Enable Linux desktop
         run: flutter config --enable-linux-desktop
@@ -90,17 +90,8 @@ jobs:
           Categories=Utility;
           EOF
 
-          # Icon: pubspec.yaml has no shared icon asset (no assets/icon/, no
-          # flutter_launcher_icons), so there's no known source PNG yet.
-          # TODO: point this at the real icon once you confirm its path
-          # (e.g. a platform-specific icon or a logo file in the repo),
-          # otherwise the AppImage ships with a blank icon.
-          if [ -f "assets/icon/icon.png" ]; then
-            cp assets/icon/icon.png "$APPDIR/$APP_NAME.png"
-          else
-            echo "No known icon source - AppImage will have a blank icon until this is fixed" >&2
-            touch "$APPDIR/$APP_NAME.png"
-          fi
+          # Icon
+          cp metadata/en-US/images/icon.png "$APPDIR/$APP_NAME.png"
 
           # AppRun
           cat > "$APPDIR/AppRun" <<'EOF'
@@ -111,7 +102,7 @@ jobs:
           chmod +x "$APPDIR/AppRun"
 
       - name: Build AppImage
-        run: ./appimagetool-x86_64.AppImage AppDir hidroly-linux-x86_64.AppImage
+        run: ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir hidroly-linux-x86_64.AppImage
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
